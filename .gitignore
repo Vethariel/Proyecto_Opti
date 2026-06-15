@@ -1,0 +1,37 @@
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Python (por si usas celdas o scripts auxiliares)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# C++ (compilación local fuera del notebook)
+*.o
+*.obj
+*.so
+*.a
+*.out
+*.exe
+build/
+cmake-build-*/
+
+# IDEs y editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Datos grandes o generados (descomenta si aplica)
+# *.csv
+# *.xlsx
+# resultados/
+# figuras/
