@@ -64,18 +64,19 @@ void solve() {
   vector<bool> mask = Knapsack(W, V);
 
   int best_val = 0;
-  for (int i = 0; i < mask.size(); ++i) {
-    best_val += V[i] * mask[i];
-  }
+  int best_weig = 0;
+
   cout << "Los componentes a desplegar en AWS son: " << endl;
   for (int i = 0; i < mask.size(); ++i) {
     if (mask[i]) {
       cout << i << ",\n"[i + 1 == mask.size()] << " \n"[i + 1 == mask.size()];
+      best_val += V[i];
+      best_weig += W[i];
     }
   }
 
-  cout << "Mejor valor de impacto lograble con 8000MB = " << best_val << endl;
-
+  cout << "Mejor valor de impacto lograble con 8000MB = " << best_val << " puntos" << endl;
+  cout << "Memoria RAM usada = " << best_weig << "MB" << endl;
 }
 
 signed main() {
